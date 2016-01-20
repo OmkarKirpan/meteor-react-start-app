@@ -4,6 +4,6 @@
 
 This app contains:
 * Meteor, React, and NPM
-* Very basic "Hello World" static setup
+* A basic, static set-up with a Home page, a header and a footer
 
 See also the [tutorial](http://www.annotatedjs.com/meteor-react-start-app/) that goes along with this start-app

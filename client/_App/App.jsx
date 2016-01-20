@@ -16,7 +16,11 @@ App = React.createClass({
 
       <div>
 
-        <h1>Hello World now</h1>
+        <AppHeader />
+
+        <HomePage />
+
+        <AppFooter />
 
       </div>
 
