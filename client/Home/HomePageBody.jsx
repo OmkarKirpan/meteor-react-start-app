@@ -23,9 +23,10 @@ HomePageBody = React.createClass({
         <ul>
           <li>Meteor, React, and NPM</li>
           <li>A basic, static set-up with a Home page, a header and a footer</li>
+          <li>User Login (create account, login/logout, change password)</li>
       	</ul>
 
-        <p>See also the <a href="http://www.annotatedjs.com/meteor-react-boilerplate/" target="_blank">tutorial</a> that goes along with this boilerplate</p>
+        <p>See also the <a href="http://www.annotatedjs.com/meteor-react/tutorials/start-app/" target="_blank">tutorial</a> that goes along with this start-app.</p>
 
       </div>
 

@@ -15,7 +15,7 @@ AppHeader = React.createClass({
 
       <div className="container">
 
-        <p>Meteor-React start-app</p>
+        <p>Meteor-React start-app -- <AccountsUIWrapper /></p>
 
       </div>
 
