@@ -3,7 +3,7 @@
 import React from 'react';
 
 // This component presents the title of the Home page
-HomePageTitle = React.createClass({
+export default class HomePageTitle extends React.Component {
 
 /***************************************/
 /* RENDER
@@ -23,4 +23,4 @@ HomePageTitle = React.createClass({
 
   }
 
-});
+}

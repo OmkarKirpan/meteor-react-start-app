@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Routes from './Routes.jsx';
+
+import AppHeader from './AppHeader/AppHeader.jsx';
+import AppFooter from './AppFooter/AppFooter.jsx';
+
 
 // App component - represents the whole app
-
-App = React.createClass({
+export default class App extends React.Component {
 
 /***************************************/
 /* RENDER
@@ -18,7 +22,7 @@ App = React.createClass({
 
         <AppHeader />
 
-        <HomePage />
+        {this.props.children}
 
         <AppFooter />
 
@@ -28,7 +32,7 @@ App = React.createClass({
 
   }
 
-});
+}
 
 
 //==========================================================================
@@ -36,6 +40,6 @@ Meteor.startup(function () {
 
   // Use Meteor.startup to render the component after the page is ready
 
-  ReactDOM.render(<App />, document.getElementById("App"));
+  ReactDOM.render(<Routes />, document.getElementById("App"));
 
 });

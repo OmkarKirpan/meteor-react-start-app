@@ -3,7 +3,7 @@
 import React from 'react';
 
 // AppFooter component - represents the main footer of this App
-AppFooter = React.createClass({
+export default class AppFooter extends React.Component {
 
 /***************************************/
 /* RENDER
@@ -23,4 +23,4 @@ AppFooter = React.createClass({
 
   }
 
-});
+}
