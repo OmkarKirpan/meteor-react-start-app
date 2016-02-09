@@ -2,29 +2,17 @@
 
 import React from 'react';
 
-import TasksText from './TasksText.jsx';
+import { TasksText } from './TasksText.jsx';
 
 // This component represents the Tasks page of this app
-export default class TasksPage extends React.Component {
+export const TasksPage = () => (
 
-/***************************************/
-/* RENDER
-/***************************************/
+  <div className="container">
 
-  render() {
+    <h1>Tasks</h1>
 
-    return (
+    <TasksText />
 
-      <div className="container">
+  </div>
 
-        <h1>Tasks</h1>
-
-        <TasksText />
-
-      </div>
-
-    );
-
-  }
-
-}
+);

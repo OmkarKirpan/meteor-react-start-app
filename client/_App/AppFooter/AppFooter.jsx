@@ -2,25 +2,14 @@
 
 import React from 'react';
 
+
 // AppFooter component - represents the main footer of this App
-export default class AppFooter extends React.Component {
+export const AppFooter = () => (
 
-/***************************************/
-/* RENDER
-/***************************************/
+  <div className="container">
 
-  render() {
+    <p><small>(c) 2016 René Post / AnnotatedJS</small></p>
 
-    return (
+  </div>
 
-      <div className="container">
-
-        <p><small>(c) 2016 René Post / AnnotatedJS</small></p>
-
-      </div>
-
-    );
-
-  }
-
-}
+);

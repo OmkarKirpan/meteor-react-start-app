@@ -1,39 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Routes from './Routes.jsx';
+import { Routes } from './Routes.jsx';
 
-import AppHeader from './AppHeader/AppHeader.jsx';
-import AppFooter from './AppFooter/AppFooter.jsx';
+import { AppHeader } from './AppHeader/AppHeader.jsx';
+import { AppFooter } from './AppFooter/AppFooter.jsx';
 
 
 // App component - represents the whole app
-export default class App extends React.Component {
+export const App = ( props ) => (
 
-/***************************************/
-/* RENDER
-/***************************************/
+  <div>
 
-  render() {
+    <AppHeader />
 
-    return (
+    {props.children}
 
-      <div>
+    <AppFooter />
 
-        <AppHeader />
+  </div>
 
-        {this.props.children}
-
-        <AppFooter />
-
-      </div>
-
-    );
-
-  }
-
-}
-
+);
 
 //==========================================================================
 Meteor.startup(function () {

@@ -2,25 +2,14 @@
 
 import React from 'react';
 
+
 // This component presents the title of the Home page
-export default class HomePageTitle extends React.Component {
+export const HomePageTitle = () => (
 
-/***************************************/
-/* RENDER
-/***************************************/
+  <div>
 
-  render() {
+    <h1>Home</h1>
 
-    return (
+  </div>
 
-      <div>
-
-        <h1>Home</h1>
-
-      </div>
-
-    );
-
-  }
-
-}
+);

@@ -4,7 +4,8 @@
 
 This start-app contains:
 * Meteor version 1.3 with React
-* NPM Packages: react react-dom react-router@2.0.0-rc5 history@2.0.0-rc2
+* NPM Packages: react react-dom react-router@2.0.0-rc5 history@2.0.0-rc2 babel@6.5.1
+* ES6: arrow functions
 * A basic lay-out with a header, body and a footer
 * User Login (create account, login/logout, change password)
 * Router with Navigation buttons

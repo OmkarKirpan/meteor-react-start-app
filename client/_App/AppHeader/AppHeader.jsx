@@ -2,32 +2,21 @@
 
 import React from 'react';
 
-import AppNavBar from './AppNavBar.jsx';
+import { AppNavBar } from './AppNavBar.jsx';
 import AccountsUIWrapper from './../../Accounts/AccountsUIWrapper.jsx';
 
+
 // AppHeader component - represents the Header workspace of this App
-export default class AppHeader extends React.Component {
+export const AppHeader = () => (
 
-/***************************************/
-/* RENDER
-/***************************************/
+  <div className="container">
 
-  render() {
+    <h1>This is AppHeader</h1>
 
-    return (
+    <p>Meteor-React start-app -- <AccountsUIWrapper /></p>
 
-      <div className="container">
+    <AppNavBar />
 
-        <h1>This is AppHeader</h1>
+  </div>
 
-        <p>Meteor-React start-app -- <AccountsUIWrapper /></p>
-
-        <AppNavBar />
-
-      </div>
-
-    );
-
-  }
-
-}
+);

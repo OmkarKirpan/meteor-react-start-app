@@ -2,30 +2,18 @@
 
 import React from 'react';
 
-import HomePageTitle from './HomePageTitle.jsx';
-import HomePageBody from './HomePageBody.jsx';
+import { HomePageTitle } from './HomePageTitle.jsx';
+import { HomePageBody } from './HomePageBody.jsx';
 
 // This component represents the Home page of this app
-export default class HomePage extends React.Component {
+export const HomePage = () => (
 
-/***************************************/
-/* RENDER
-/***************************************/
+  <div className="container">
 
-  render() {
+    <HomePageTitle />
 
-    return (
+    <HomePageBody />
 
-      <div className="container">
+  </div>
 
-        <HomePageTitle />
-
-        <HomePageBody />
-
-      </div>
-
-    );
-
-  }
-
-}
+);

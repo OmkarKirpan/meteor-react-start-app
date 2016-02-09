@@ -5,28 +5,16 @@ import React from 'react';
 import { Link, browserHistory } from 'react-router';
 
 // AppNavBarr component - represents the Navigation Buttons of this App
-export default class AppNavBar extends React.Component {
+export const AppNavBar = () => (
 
-/***************************************/
-/* RENDER
-/***************************************/
+  <div>
 
-  render() {
+    <Link to="/home"><button>Home</button></Link>
 
-    return (
+    <Link to="/tasks"><button>Tasks</button></Link>
 
-      <div>
+    <Link to="/admin"><button>Admin</button></Link>
 
-        <Link to="/home"><button>Home</button></Link>
+  </div>
 
-        <Link to="/tasks"><button>Tasks</button></Link>
-
-        <Link to="/admin"><button>Admin</button></Link>
-
-      </div>
-
-    );
-
-  }
-
-}
+);
