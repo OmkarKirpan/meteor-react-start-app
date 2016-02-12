@@ -1,18 +1,51 @@
 
-
+import { Meteor } from 'meteor/meteor';
 import React from 'react';
+import { TasksList } from './TasksList.jsx';
 
-import { TasksText } from './TasksText.jsx';
+import Tasks from '/lib/collections/tasks';
+import reactMixin from 'react-mixin';
+
+
+Meteor.subscribe("tasks");
+
 
 // This component represents the Tasks page of this app
-export const TasksPage = () => (
+export default class TasksPage extends React.Component {
 
-  <div className="container">
+  // The getMeteorData method makes Meteor data available and puts them on this.data
+  getMeteorData() {
+    let query = {};
 
-    <h1>Tasks</h1>
+    return {
+      tasks: Tasks.find(query, {sort: {createdAt: -1}}).fetch()
 
-    <TasksText />
+    }
+  }
 
-  </div>
+/***************************************/
+/* RENDER
+/***************************************/
 
-);
+  render() {
+
+    return (
+
+      <div className="container">
+
+        <h1>Tasks</h1>
+
+        <TasksList
+          tasks={this.data.tasks}
+        />
+
+      </div>
+
+    )
+
+  }
+
+}
+
+
+reactMixin(TasksPage.prototype, ReactMeteorData);
