@@ -9,6 +9,10 @@ import { TaskOne } from './TaskOne.jsx';
 // This component represents the TasksList page of this app
 export class TasksList extends React.Component {
 
+
+/***************************************/
+/* RENDER
+/***************************************/
   renderTasks() {
 
     var p = this.props;
@@ -16,10 +20,30 @@ export class TasksList extends React.Component {
     // Map tasks to TaskRow array
     return p.tasks.map((task) => {
 
+      var showPrivateButton = false;
+      if (task.owner === Meteor.userId()) {
+        showPrivateButton = "true";
+        if (task.private) {
+          task.privateBtnLbl = "private";
+        } else {
+          task.privateBtnLbl = "public";
+        }
+      }
+
+      const taskClassName = (task.checked ? "checked" : "")
+                                    + " "
+                                    + (task.private ? "private" : "");
+
       return <TaskOne
         key={task._id}
         task={task}
-        />;
+        showPrivateButton={showPrivateButton}
+        taskClassName={taskClassName}
+        toggleChecked={p.toggleChecked.bind(this)}
+        togglePrivate={p.togglePrivate.bind(this)}
+        deleteThisTask={p.deleteThisTask.bind(this)}
+      />;
+
     });
   }
 

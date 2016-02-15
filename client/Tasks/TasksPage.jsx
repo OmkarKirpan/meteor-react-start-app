@@ -63,6 +63,19 @@ export default class TasksPage extends React.Component {
     this.setState({text: event.target.value});
   }
 
+  toggleChecked(taskId, taskCheck) {
+    // Set the checked property to the opposite of its current value
+    Meteor.call("setChecked", taskId, ! taskCheck);
+  }
+
+  togglePrivate(taskId, taskPrivate) {
+    Meteor.call("setPrivate", taskId, ! taskPrivate);
+  }
+
+  deleteThisTask(taskId) {
+    Meteor.call("removeTask", taskId);
+  }
+
 
 /***************************************/
 /* RENDER
@@ -70,8 +83,9 @@ export default class TasksPage extends React.Component {
 
   render() {
 
-    var d = this.data;
     var s = this.state;
+    var p = this.props;
+    var d = this.data;
 
     return (
 
@@ -91,6 +105,9 @@ export default class TasksPage extends React.Component {
           tasks={d.tasks}
           incompleteCount={d.incompleteCount}
           toggleHideCompleted={this.toggleHideCompleted.bind(this)}
+          toggleChecked={this.toggleChecked.bind(this)}
+          togglePrivate={this.togglePrivate.bind(this)}
+          deleteThisTask={this.deleteThisTask.bind(this)}
         />
 
       </div>
