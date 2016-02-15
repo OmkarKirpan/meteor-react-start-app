@@ -26,6 +26,11 @@ export default class TasksPage extends React.Component {
   getMeteorData() {
     let query = {};
 
+    if (this.state.hideCompleted) {
+      // If hide completed is checked, filter tasks
+      query = {checked: {$ne: true}};
+    }
+
     return {
       tasks: Tasks.find(query, {sort: {createdAt: -1}}).fetch(),
       incompleteCount: Tasks.find({checked: {$ne: true}}).count(),
@@ -38,6 +43,12 @@ export default class TasksPage extends React.Component {
 /***************************************/
 /* UI EVENTS & ACTIONS
 /***************************************/
+
+  toggleHideCompleted() {
+    this.setState({
+      hideCompleted: ! this.state.hideCompleted
+    });
+  }
 
   handleSubmit(event) {
     event.preventDefault();
@@ -70,7 +81,7 @@ export default class TasksPage extends React.Component {
 
         { d.currentUser ?
           <TaskNew
-            text={this.state.text}
+            text={s.text}
             onTextChange={this.onTextChange.bind(this)}
             handleSubmit={this.handleSubmit.bind(this)}
           /> : ""
@@ -79,6 +90,7 @@ export default class TasksPage extends React.Component {
         <TasksList
           tasks={d.tasks}
           incompleteCount={d.incompleteCount}
+          toggleHideCompleted={this.toggleHideCompleted.bind(this)}
         />
 
       </div>

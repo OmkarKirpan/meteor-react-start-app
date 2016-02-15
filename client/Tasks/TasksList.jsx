@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { TasksHeader } from './TasksHeader.jsx';
+import { TasksFilter } from './TasksFilter.jsx';
 import { TaskOne } from './TaskOne.jsx';
 
 
@@ -37,6 +38,10 @@ export class TasksList extends React.Component {
 
           <TasksHeader
             incompleteCount={p.incompleteCount}
+          />
+
+          <TasksFilter
+            toggleHideCompleted={p.toggleHideCompleted.bind(this)}
           />
 
           <ul>
