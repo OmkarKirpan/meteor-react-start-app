@@ -20,7 +20,7 @@ export class TasksList extends React.Component {
         />;
     });
   }
-  
+
 
 /***************************************/
 /* RENDER
@@ -33,6 +33,7 @@ export class TasksList extends React.Component {
       return (
 
         <div>
+          <h3>List with Tasks</h3>
 
           <ul>
             {this.renderTasks()}

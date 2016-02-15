@@ -17,13 +17,11 @@ Meteor.startup(function(){
       'username': 'UserOne',
       'password': 'password'
     });
-    console.log('UserOne');
 
     Accounts.createUser({
       'username': 'UserTwo',
       'password': 'password'
     });
-    console.log('UserTwo');
 
   }
 
@@ -37,8 +35,6 @@ Meteor.startup(function(){
 
     var userOne = Accounts.findUserByUsername('UserOne');
 
-    console.log('userOne username: ' + userOne.username);
-
     Tasks.insert({
       text: "Public Not Completed Task 1",
       createdAt: 'ISODate("2016-01-01T08:35:46.522Z")',
@@ -46,7 +42,6 @@ Meteor.startup(function(){
       owner: userOne._id,
       username: userOne.username
     });
-    console.log('Task 1');
 
     Tasks.insert({
       text: "Public Completed 2",
