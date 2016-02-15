@@ -59,13 +59,16 @@ export default class TasksPage extends React.Component {
 
   render() {
 
+    var d = this.data;
+    var s = this.state;
+
     return (
 
       <div className="container">
 
         <h1>Tasks</h1>
 
-        { this.data.currentUser ?
+        { d.currentUser ?
           <TaskNew
             text={this.state.text}
             onTextChange={this.onTextChange.bind(this)}
@@ -74,7 +77,8 @@ export default class TasksPage extends React.Component {
         }
 
         <TasksList
-          tasks={this.data.tasks}
+          tasks={d.tasks}
+          incompleteCount={d.incompleteCount}
         />
 
       </div>

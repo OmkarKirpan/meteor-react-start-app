@@ -1,6 +1,7 @@
 
 
 import React from 'react';
+import { TasksHeader } from './TasksHeader.jsx';
 import { TaskOne } from './TaskOne.jsx';
 
 
@@ -33,7 +34,10 @@ export class TasksList extends React.Component {
       return (
 
         <div>
-          <h3>List with Tasks</h3>
+
+          <TasksHeader
+            incompleteCount={p.incompleteCount}
+          />
 
           <ul>
             {this.renderTasks()}
