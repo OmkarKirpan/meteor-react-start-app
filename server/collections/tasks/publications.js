@@ -3,7 +3,7 @@
 
 import { Meteor } from 'meteor/meteor';
 
-import Tasks from '/lib/collections/tasks';
+import Tasks from '/lib/collections/tasks/declare';
 
 
 //Meteor.publish('tasks', () => Tasks.find());

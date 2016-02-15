@@ -3,7 +3,7 @@ import { Meteor } from 'meteor/meteor';
 import React from 'react';
 import { TasksList } from './TasksList.jsx';
 
-import Tasks from '/lib/collections/tasks';
+import Tasks from '/lib/collections/tasks/declare';
 import reactMixin from 'react-mixin';
 
 
@@ -18,7 +18,9 @@ export default class TasksPage extends React.Component {
     let query = {};
 
     return {
-      tasks: Tasks.find(query, {sort: {createdAt: -1}}).fetch()
+      tasks: Tasks.find(query, {sort: {createdAt: -1}}).fetch(),
+      incompleteCount: Tasks.find({checked: {$ne: true}}).count(),
+      currentUser: Meteor.user()
 
     }
   }
