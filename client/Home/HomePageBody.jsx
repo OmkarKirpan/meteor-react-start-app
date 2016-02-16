@@ -22,7 +22,8 @@ export const HomePageBody = () => (
       <li>Some static ‘pages’: Home, Admin and NotFound</li>
       <li>All features of simple-todos-react, such as:
         <ul>
-          <li>Add a new task</li>
+          <li>Add a new task <small>(double click on the text)</small></li>
+          <li>Edit the text of an existing task</li>
           <li>List of tasks</li>
           <li>Counter with number of not completed tasks</li>
           <li>Filter or not completed tasks</li>

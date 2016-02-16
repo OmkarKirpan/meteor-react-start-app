@@ -10,7 +10,7 @@ export class TaskPrivate extends React.Component {
     super(props);
   }
 
-  togglePrivate() {
+  onClick() {
 
     var p = this.props;
 
@@ -28,7 +28,7 @@ export class TaskPrivate extends React.Component {
 
     return (
 
-      <button className="toggle-private" onClick={this.togglePrivate.bind(this)}>
+      <button className="toggle-private" onClick={this.onClick.bind(this)}>
         { p.task.privateBtnLbl }
       </button>
 

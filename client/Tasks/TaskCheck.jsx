@@ -10,7 +10,7 @@ export class TaskCheck extends React.Component {
     super(props);
   }
 
-  toggleChecked() {
+  onClick() {
 
     var p = this.props;
 
@@ -32,7 +32,7 @@ export class TaskCheck extends React.Component {
           type="checkbox"
           readOnly={true}
           checked={p.task.checked}
-          onClick={this.toggleChecked.bind(this)}
+          onClick={this.onClick.bind(this)}
         />
 
     );

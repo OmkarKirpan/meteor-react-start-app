@@ -48,6 +48,14 @@ export class TaskOne extends React.Component {
 
           <TaskText
             task={ p.task }
+            edit={p.edit}
+            editTask={p.editTask}
+            beginTextEdit={p.beginTextEdit.bind(this)}
+            processTextTyping={p.processTextTyping.bind(this)}
+            processTextClear={p.processTextClear.bind(this)}
+            processTextReset={p.processTextReset.bind(this)}
+            endTextEditSave={p.endTextEditSave.bind(this)}
+            endTextEditClear={p.endTextEditClear.bind(this)}
           />
 
         </li>

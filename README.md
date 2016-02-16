@@ -12,11 +12,16 @@ This start-app contains:
 * Some static 'pages': Home, Admin and NotFound
 * All features of simple-todos-react, such as:
   * Add a new task
+  * Edit the text of an existing task
   * List of tasks
   * Counter with number of not completed tasks
   * Filter or not completed tasks
   * Change tasks from public to private and vice versa
   * Change tasks from not-completed to completed and vice versa
   * Remove tasks
+
+Find the source at Github: [AnnotatedJS/meteor-react-start-app](https://github.com/AnnotatedJS/meteor-react-start-app)
+
+Try it out at [meteor.com](http://meteor-react-start-app.meteor.com)
 
 See also the [tutorial](http://www.annotatedjs.com/meteor-react/tutorials/start-app/) that goes along with this start-app.

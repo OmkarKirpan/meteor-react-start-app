@@ -10,7 +10,7 @@ export class TaskDelete extends React.Component {
     super(props);
   }
 
-  deleteThisTask() {
+  onClick() {
 
     var p = this.props;
 
@@ -28,7 +28,7 @@ export class TaskDelete extends React.Component {
 
       return (
 
-        <button className="delete" onClick={this.deleteThisTask.bind(this)}>
+        <button className="delete" onClick={this.onClick.bind(this)}>
             &times;
           </button>
 

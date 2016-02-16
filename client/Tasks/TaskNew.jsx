@@ -24,7 +24,7 @@ export class TaskNew extends React.Component {
         <div>
           <h3>Add new Task</h3>
 
-          <form className="new-task"  onSubmit={p.handleSubmit.bind(this)} >
+          <form className="new-task" onSubmit={p.handleSubmit.bind(this)} >
 
             <input
               type="text"
