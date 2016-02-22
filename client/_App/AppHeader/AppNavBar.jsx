@@ -1,8 +1,8 @@
 
 
 import React from 'react';
-
 import { Link, browserHistory } from 'react-router';
+import AccountsUIWrapper from './../../Accounts/AccountsUIWrapper.jsx';
 
 // AppNavBarr component - represents the Navigation Buttons of this App
 export const AppNavBar = () => (
@@ -14,6 +14,8 @@ export const AppNavBar = () => (
     <Link to="/tasks"><button>Tasks</button></Link>
 
     <Link to="/admin"><button>Admin</button></Link>
+
+    <button><AccountsUIWrapper /></button>
 
   </div>
 
