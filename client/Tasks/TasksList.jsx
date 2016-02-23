@@ -84,7 +84,7 @@ export class TasksList extends React.Component {
             toggleHideCompleted={p.toggleHideCompleted.bind(this)}
           />
 
-          <ul>
+          <ul className="task-ul">
             {this.renderTasks()}
           </ul>
 

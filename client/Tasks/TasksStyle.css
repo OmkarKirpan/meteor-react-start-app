@@ -19,7 +19,7 @@ form {
   outline: 0;
 }
 
-ul {
+.task-ul {
   margin: 0;
   padding: 0;
   background: white;
@@ -34,26 +34,26 @@ ul {
   position: relative;
 }
 
-li {
+.task-li {
   position: relative;
   list-style: none;
   padding: 15px;
   border-bottom: #eee solid 1px;
 }
 
-li .text {
+ .text {
   margin-left: 10px;
 }
 
-li.checked {
+.checked {
   color: #888;
 }
 
-li.checked .text {
+.checked .text {
   text-decoration: line-through;
 }
 
-li.private {
+.private {
   background: #eee;
   border-color: #ddd;
 }
@@ -67,7 +67,7 @@ header .hide-completed {
 }
 
 @media (max-width: 600px) {
-  li {
+.task-li {
     padding: 12px 15px;
   }
 

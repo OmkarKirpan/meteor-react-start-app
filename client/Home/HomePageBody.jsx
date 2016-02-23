@@ -16,7 +16,7 @@ export const HomePageBody = () => (
       <li>Meteor release 1.3-beta.11 with React and React Router</li>
       <li>NPM Packages: react react-dom react-router@2.0.0-rc5 history@2.0.0-rc2  react-mixin babel@6.5.1</li>
       <li>ES6: arrow functions, import/export modules</li>
-      <li>A basic lay-out with a header, body and a footer</li>
+      <li>A reactive lay-out based on flexbox with a header, body and a footer and three columns</li>
       <li>User Login (create account, login/logout, change password)</li>
       <li>React Router with Navigation buttons</li>
       <li>Some static ‘pages’: Home, Admin and NotFound</li>
