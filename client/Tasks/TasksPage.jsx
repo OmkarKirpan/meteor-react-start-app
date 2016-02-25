@@ -1,11 +1,11 @@
 
 import { Meteor } from 'meteor/meteor';
 import React from 'react';
+import reactMixin from 'react-mixin';
+import Tasks from '/lib/collections/tasks/declare';
+
 import { TasksList } from './TasksList.jsx';
 import { TaskNew } from './TaskNew.jsx';
-
-import Tasks from '/lib/collections/tasks/declare';
-import reactMixin from 'react-mixin';
 
 
 Meteor.subscribe("tasks");
@@ -45,18 +45,17 @@ export default class TasksPage extends React.Component {
     }
   }
 
+  /***************************************/
+  /* UI EVENTS & ACTIONS
+  /***************************************/
 
-/***************************************/
-/* UI EVENTS & ACTIONS
-/***************************************/
-
-  toggleHideCompleted() {
+   toggleHideCompleted() {
     this.setState({
       hideCompleted: ! this.state.hideCompleted
     });
   }
 
-  handleSubmit(event) {
+   handleSubmit(event) {
     event.preventDefault();
 
     Meteor.call("addTask", this.state.text);
@@ -65,24 +64,24 @@ export default class TasksPage extends React.Component {
     this.setState({text: ""});
   }
 
-  onTextChange(event) {
+   onTextChange(event) {
     this.setState({text: event.target.value});
   }
 
-  toggleChecked(taskId, taskCheck) {
+   toggleChecked(taskId, taskCheck) {
     // Set the checked property to the opposite of its current value
     Meteor.call("setChecked", taskId, ! taskCheck);
   }
 
-  togglePrivate(taskId, taskPrivate) {
+   togglePrivate(taskId, taskPrivate) {
     Meteor.call("setPrivate", taskId, ! taskPrivate);
   }
 
-  deleteThisTask(taskId) {
+   deleteThisTask(taskId) {
     Meteor.call("removeTask", taskId);
   }
 
-  beginTextEdit(taskId, taskText) {
+   beginTextEdit(taskId, taskText) {
     var tmpEdit = this.state.edit
     tmpEdit.taskId = taskId
     tmpEdit.text = taskText
@@ -90,27 +89,27 @@ export default class TasksPage extends React.Component {
     this.setState({edit: tmpEdit})
   }
 
-  processTextTyping(latestText) {
+   processTextTyping(latestText) {
     var tmpEdit = this.state.edit
     tmpEdit.text = latestText
     this.setState({edit: tmpEdit})
   }
 
-  processTextClear() {
+   processTextClear() {
     // Clear only Text
    var tmpEdit = this.state.edit;
    tmpEdit.text = "";
    this.setState({edit: tmpEdit});
   }
 
-  processTextReset() {
+   processTextReset() {
     // Reset form
    var tmpEdit = this.state.edit
    tmpEdit.text = this.state.edit.taskText
    this.setState({edit: tmpEdit})
   }
 
-  endTextEditSave(finalText) {
+   endTextEditSave(finalText) {
     if (finalText === "") {
       finalText = "?-?-?";
     }
@@ -118,7 +117,7 @@ export default class TasksPage extends React.Component {
     this.endTextEditClear()
   }
 
-  endTextEditClear() {
+   endTextEditClear() {
     // Clear all
    var tmpEdit = this.state.edit
    tmpEdit.taskId = ""
@@ -126,6 +125,8 @@ export default class TasksPage extends React.Component {
    tmpEdit.text = ""
    this.setState({edit: tmpEdit})
   }
+
+
 /***************************************/
 /* RENDER
 /***************************************/

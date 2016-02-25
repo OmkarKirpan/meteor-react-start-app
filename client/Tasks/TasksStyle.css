@@ -45,15 +45,15 @@ form {
   margin-left: 10px;
 }
 
-.checked {
+.task-checked {
   color: #888;
 }
 
-.checked .text {
+.task-checked .text {
   text-decoration: line-through;
 }
 
-.private {
+.task-private {
   background: #eee;
   border-color: #ddd;
 }

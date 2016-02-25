@@ -27,7 +27,7 @@ export class TaskOne extends React.Component {
 
       return (
 
-        <li key={ p.key } className="task-li {p.taskClassName}" >
+        <li key={ p.key } className={p.taskClassName} >
 
           <TaskDelete
             task={ p.task }

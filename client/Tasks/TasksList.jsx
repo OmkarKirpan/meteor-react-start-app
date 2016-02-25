@@ -38,9 +38,9 @@ export class TasksList extends React.Component {
         }
       }
 
-      const taskClassName = (task.checked ? "checked" : "")
-                                    + " "
-                                    + (task.private ? "private" : "");
+      const taskClassName =  "task-li "
+                              + (task.checked ? "task-checked " : "")
+                              + (task.private ? "task-private" : "");
 
       return <TaskOne
         key={task._id}
