@@ -15,7 +15,7 @@ export const AppNavBar = () => (
 
     <Link to="/admin"><button>Admin</button></Link>
 
-    <button><AccountsUIWrapper /></button>
+    <AccountsUIWrapper />
 
   </div>
 
