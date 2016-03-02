@@ -2,10 +2,19 @@
 
 ## Meteor-React start-app
 
+Find the source at Github: [AnnotatedJS/meteor-react-start-app](https://github.com/AnnotatedJS/meteor-react-start-app)
+
+Try it out at [meteor.com](http://meteor-react-start-app.meteor.com)
+
+See also the [tutorial](http://www.annotatedjs.com/meteor-react/tutorials/start-app/) that goes along with this start-app.
+
+
+## Features
+
 This app isn’t done yet. If you think something is missing or wrong, just sent me an email.
 
 This start-app contains:
-* Meteor release 1.3-beta.11 with React and React Router
+* Meteor release 1.3-beta.12 with React and React Router
 * NPM Packages: react react-dom react-router@2.0.0-rc5 history@2.0.0-rc2  react-mixin babel@6.5.1
 * ES6: arrow functions
 * A reactive lay-out based on flexbox with a header, body and a footer and three columns
@@ -22,8 +31,40 @@ This start-app contains:
   * Change tasks from not-completed to completed and vice versa
   * Remove tasks
 
-Find the source at Github: [AnnotatedJS/meteor-react-start-app](https://github.com/AnnotatedJS/meteor-react-start-app)
 
-Try it out at [meteor.com](http://meteor-react-start-app.meteor.com)
+## Fixtures
 
-See also the [tutorial](http://www.annotatedjs.com/meteor-react/tutorials/start-app/) that goes along with this start-app.
+The following users are created automatically (all with password "password"):
+* UserOne
+* UserTwo
+
+Also, the following tasks are created automatically (all created by UserOne):
+* Public Not Completed Task 1
+* Public Completed 2
+* Private Not Completed Task 3
+* Private Completed Task 4
+
+
+## License
+
+Copyright (C) 2016 AnnotatedJS/René Post
+
+The MIT License (MIT)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
