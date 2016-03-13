@@ -14,7 +14,7 @@ export const HomePageBody = () => (
 
     <ul>
       <li>Meteor release 1.3-beta.12 with React and React Router</li>
-      <li>NPM Packages: react react-dom react-router@2.0.0-rc5 history@2.0.0-rc2  react-mixin babel@6.5.1</li>
+      <li>NPM Packages: react@15.0.0-rc.1 react-dom@15.0.0-rc.1 react-router@2.0.0-rc5 history@2.0.0-rc2  react-mixin babel@6.5.1</li>
       <li>ES6: arrow functions, import/export modules</li>
       <li>A reactive lay-out based on flexbox with a header, body and a footer and three columns</li>
       <li>User Login (create account, login/logout, change password)</li>
@@ -35,6 +35,7 @@ export const HomePageBody = () => (
   	</ul>
 
     <p>See also the <a href="http://www.annotatedjs.com/meteor-react/tutorials/start-app/" target="_blank">tutorial</a> that goes along with this start-app.</p>
+    <p>Find the source at <a href="https://github.com/AnnotatedJS/meteor-react-start-app/" target="_blank">GitHub</a></p>
 
   </div>
 
