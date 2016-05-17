@@ -14,8 +14,8 @@ See also the [tutorial](http://www.annotatedjs.com/meteor-react/tutorials/start-
 This app isn’t done yet. If you think something is missing or wrong, just sent me an email.
 
 This start-app contains:
-* Meteor release 1.3-rc.3 with React and React Router
-* NPM Packages: react@15.0.0-rc.1 react-dom@15.0.0-rc.1 react-router@2.0.0-rc5 history@2.0.0-rc2  react-mixin babel@6.5.1
+* Meteor release 1.3-rc.12 with React and React Router
+* NPM Packages: react@15.0.2 react-dom@15.0.2 react-router@2.4.0 history@2.1.1  react-mixin babel@6.5.2
 * ES6: arrow functions
 * A reactive lay-out based on flexbox with a header, body and a footer and three columns
 * User Login (create account, login/logout, change password)
