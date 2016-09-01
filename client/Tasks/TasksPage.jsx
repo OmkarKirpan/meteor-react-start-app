@@ -58,7 +58,7 @@ export default class TasksPage extends React.Component {
    handleSubmit(event) {
     event.preventDefault();
 
-    Meteor.call("addTask", this.state.text);
+    Meteor.call("tasks.add", this.state.text);
 
     // Clear form
     this.setState({text: ""});
@@ -70,15 +70,15 @@ export default class TasksPage extends React.Component {
 
    toggleChecked(taskId, taskCheck) {
     // Set the checked property to the opposite of its current value
-    Meteor.call("setChecked", taskId, ! taskCheck);
+    Meteor.call("tasks.setChecked", taskId, ! taskCheck);
   }
 
    togglePrivate(taskId, taskPrivate) {
-    Meteor.call("setPrivate", taskId, ! taskPrivate);
+    Meteor.call("tasks.setPrivate", taskId, ! taskPrivate);
   }
 
    deleteThisTask(taskId) {
-    Meteor.call("removeTask", taskId);
+    Meteor.call("tasks.remove", taskId);
   }
 
    beginTextEdit(taskId, taskText) {
@@ -113,7 +113,7 @@ export default class TasksPage extends React.Component {
     if (finalText === "") {
       finalText = "?-?-?";
     }
-    Meteor.call("editTaskText", this.state.edit.taskId, finalText)
+    Meteor.call("tasks.updateText", this.state.edit.taskId, finalText)
     this.endTextEditClear()
   }
 
