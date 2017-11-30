@@ -13,14 +13,23 @@ export const HomePageBody = () => (
     </p>
 
     <ul>
-      <li>Meteor release 1.4.1.1 with React and React Router</li>
-      <li>NPM Packages: react@15.3.1 react-dom@15.3.1 react-router@2.0.0-rc5 history@3.0.0  react-mixin babel@6.5.1</li>
+      <li>Meteor release 1.5.2.1 with React and React Router</li>
+      <li>NPM Packages: 
+        <ul>
+          <li>react@15.6.2</li>
+          <li>react-dom@15.6.2</li>
+          <li>react-router@2.8.1</li>
+          <li>history@3.3.0</li>
+          <li>react-mixin@4.0.0</li>
+          <li>babel@6.23.0</li>
+        </ul>
+      </li>
       <li>ES6: arrow functions, import/export modules</li>
       <li>A reactive lay-out based on flexbox with a header, body and a footer and three columns</li>
       <li>User Login (create account, login/logout, change password)</li>
       <li>React Router with Navigation buttons</li>
       <li>Some static ‘pages’: Home, Admin and NotFound</li>
-      <li>Dynamic Task page<br />All features of simple-todos-react, such as:
+      <li>Dynamic Task page<br />All features of simple-todos-react (and some more),<br />such as:
         <ul>
           <li>Add a new task</li>
           <li>Edit the text of an existing task <small>(double click on the text)</small></li>

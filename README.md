@@ -4,24 +4,22 @@
 
 Find the source at Github: [AnnotatedJS/meteor-react-start-app](https://github.com/AnnotatedJS/meteor-react-start-app)
 
-Try it out at [meteor.com](http://meteor-react-start-app.meteor.com)
-
 See also the [tutorial](http://www.annotatedjs.com/meteor-react/tutorials/start-app/) that goes along with this start-app.
 
 
 ## Features
 
-This app isn’t done yet. If you think something is missing or wrong, just sent me an email.
+This app isn’t done yet. If you think something is missing or wrong, just open an issue on GitHub.
 
 This start-app contains:
-* Meteor release 1.3-rc.12 with React and React Router
-* NPM Packages: react@15.0.2 react-dom@15.0.2 react-router@2.4.0 history@2.1.1  react-mixin babel@6.5.2
+* Meteor release 1.5.2.1 with React and React Router
+* NPM Packages: react@15.6.2 react-dom@15.6.2 react-router@2.4.0 history@3.3.0  react-mixin@4.0.0 babel@6.23.0
 * ES6: arrow functions
 * A reactive lay-out based on flexbox with a header, body and a footer and three columns
 * User Login (create account, login/logout, change password)
 * Router with Navigation buttons
 * Some static 'pages': Home, Admin and NotFound
-* >Dynamic Task page with all features of MDG's simple-todos-react, such as:
+* Dynamic Task page with all features of MDG's simple-todos-react, such as:
   * Add a new task
   * Edit the text of an existing task
   * List of tasks
@@ -47,7 +45,7 @@ Also, the following tasks are created automatically (all created by UserOne):
 
 ## License
 
-Copyright (C) 2016 AnnotatedJS/René Post
+Copyright (C) 2017 AnnotatedJS/René Post
 
 The MIT License (MIT)
 
