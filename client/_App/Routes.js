@@ -5,11 +5,11 @@ import ReactDOM from "react-dom";
 
 import { Router, Route, Link, IndexRoute, browserHistory } from 'react-router';
 
-import { App } from './App.jsx';
-import { HomePage } from './../Home/HomePage.jsx';
-import TasksPage from './../Tasks/TasksPage.jsx';
-import { AdminPage } from './../Admin/AdminPage.jsx';
-import { NotFoundPage } from './../NotFound/NotFoundPage.jsx';
+import { App } from './App.js';
+import { HomePage } from './../Home/HomePage.js';
+import TasksPage from './../Tasks/TasksPage.js';
+import { AdminPage } from './../Admin/AdminPage.js';
+import { NotFoundPage } from './../NotFound/NotFoundPage.js';
 
 
 export const Routes = () => (

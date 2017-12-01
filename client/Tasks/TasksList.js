@@ -1,9 +1,9 @@
 
 
 import React from 'react';
-import { TasksHeader } from './TasksHeader.jsx';
-import { TasksFilter } from './TasksFilter.jsx';
-import { TaskOne } from './TaskOne.jsx';
+import { TasksHeader } from './TasksHeader.js';
+import { TasksFilter } from './TasksFilter.js';
+import { TaskOne } from './TaskOne.js';
 
 
 // This component represents the TasksList page of this app

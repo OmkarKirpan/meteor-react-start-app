@@ -3,10 +3,10 @@
 import React from 'react';
 
 
-import { TaskDelete } from './TaskDelete.jsx';
-import { TaskCheck } from './TaskCheck.jsx';
-import { TaskPrivate } from './TaskPrivate.jsx';
-import { TaskText } from './TaskText.jsx';
+import { TaskDelete } from './TaskDelete.js';
+import { TaskCheck } from './TaskCheck.js';
+import { TaskPrivate } from './TaskPrivate.js';
+import { TaskText } from './TaskText.js';
 
 
 // This component represents the Tasks page of this app
@@ -27,7 +27,7 @@ export class TaskOne extends React.Component {
 
       return (
 
-        <li key={ p.key } className={p.taskClassName} >
+        <li className={p.taskClassName} >
 
           <TaskDelete
             task={ p.task }

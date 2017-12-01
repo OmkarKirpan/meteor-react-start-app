@@ -3,8 +3,8 @@
 import React from 'react';
 
 
-import { TaskTextPlain } from './TaskTextPlain.jsx';
-import { TaskTextFormEdit } from './TaskTextFormEdit.jsx';
+import { TaskTextPlain } from './TaskTextPlain.js';
+import { TaskTextFormEdit } from './TaskTextFormEdit.js';
 
 
 // This component represents the Tasks page of this app

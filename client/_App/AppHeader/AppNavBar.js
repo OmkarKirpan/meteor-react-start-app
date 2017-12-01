@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Link, browserHistory } from 'react-router';
-import AccountsUIWrapper from './../../Accounts/AccountsUIWrapper.jsx';
+import AccountsUIWrapper from './../../Accounts/AccountsUIWrapper.js';
 
 // AppNavBarr component - represents the Navigation Buttons of this App
 export const AppNavBar = () => (

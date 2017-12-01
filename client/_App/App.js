@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { Routes } from './Routes.jsx';
+import { Routes } from './Routes.js';
 
-import { AppHeader } from './AppHeader/AppHeader.jsx';
-import { AppSideLeft } from './AppSideLeft/AppSideLeft.jsx';
-import { AppSideRight } from './AppSideRight/AppSideRight.jsx';
-import { AppFooter } from './AppFooter/AppFooter.jsx';
+import { AppHeader } from './AppHeader/AppHeader.js';
+import { AppSideLeft } from './AppSideLeft/AppSideLeft.js';
+import { AppSideRight } from './AppSideRight/AppSideRight.js';
+import { AppFooter } from './AppFooter/AppFooter.js';
 
 
 // App component - represents the whole app

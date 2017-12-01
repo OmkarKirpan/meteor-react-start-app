@@ -2,8 +2,8 @@
 
 import React from 'react';
 
-import { HomePageTitle } from './HomePageTitle.jsx';
-import { HomePageBody } from './HomePageBody.jsx';
+import { HomePageTitle } from './HomePageTitle.js';
+import { HomePageBody } from './HomePageBody.js';
 
 // This component represents the Home page of this app
 export const HomePage = () => (
