@@ -4,6 +4,7 @@ import React from 'react';
 import reactMixin from 'react-mixin';
 import Tasks from '/lib/collections/tasks/declare';
 
+import { PageTitle } from './../_App/PageTitle.js'
 import { TasksList } from './TasksList.js';
 import { TaskNew } from './TaskNew.js';
 
@@ -11,12 +12,12 @@ import { TaskNew } from './TaskNew.js';
 Meteor.subscribe("tasks");
 
 
-// This component represents the Tasks page of this app
 export default class TasksPage extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
+      pageTitle: 'Manage Your Tasks',
       hideCompleted: false,
       text: '',
       edit: {
@@ -141,7 +142,9 @@ export default class TasksPage extends React.Component {
 
       <div className="container">
 
-        <h1>Tasks</h1>
+        <PageTitle 
+          pageTitle={s.pageTitle}
+        />
 
         { d.currentUser ?
           <TaskNew

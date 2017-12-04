@@ -1,13 +1,16 @@
 
 
 import React from 'react';
+import { PageTitle } from './../_App/PageTitle.js'
 
-// This component represents the NotFound page of this app
+
 export const NotFoundPage = () => (
 
   <div className="container">
-
-    <h1>404 - Page Not Found</h1>
+  
+    <PageTitle 
+      pageTitle='404 - Page Not Found'
+    />
 
   </div>
 
