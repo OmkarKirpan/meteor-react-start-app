@@ -73,7 +73,7 @@ body {
 }
 
 
-header, footer {
+.app-header, footer {
   background: #d2edf4;
   background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
   padding: 20px;
@@ -97,6 +97,25 @@ h1 {
 .button-delete {
   color: #E74C3C;
   font-weight: bold;
+}
+
+.nav-container {
+  width: 90%;
+  overflow: auto;
+}
+
+.nav-container li {
+  display: inline-block;
+}
+
+.nav-left {
+  float: left;
+  margin-left: 10px;
+}
+
+.nav-right {
+  float: right;
+  margin-right: 10px;
 }
 
 
