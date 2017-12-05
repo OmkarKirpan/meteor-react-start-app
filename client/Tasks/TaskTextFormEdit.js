@@ -2,6 +2,8 @@
 
 import React from 'react';
 
+import Button from './../_App/Button'
+
 
 export default class TaskTextFormEdit extends React.Component {
 
@@ -17,18 +19,7 @@ export default class TaskTextFormEdit extends React.Component {
   onTextChange(event) {
     this.props.processTextTyping(event.target.value)
   }
-
-  btnCancel() {
-    this.props.endTextEditClear()
-  }
-
-  btnClear() {
-    this.props.processTextClear()
-  }
-
-  btnReset() {
-    this.props.processTextReset()
-  }
+  
 
 /***************************************/
 /* RENDER
@@ -53,9 +44,18 @@ export default class TaskTextFormEdit extends React.Component {
               onChange={this.onTextChange.bind(this)}
             />
 
-            <button type="button" onClick={this.btnCancel.bind(this)}>Cancel</button>
-            <button type="button" onClick={this.btnClear.bind(this)}>Clear</button>
-            <button type="button" onClick={this.btnReset.bind(this)}>Reset</button>
+            <Button 
+              value='Cancel'
+              handleOnClick={p.endTextEditClear.bind(this)}
+            />
+            <Button 
+            value='Clear'
+            handleOnClick={p.processTextClear.bind(this)}
+            />
+            <Button 
+              value='Reset'
+              handleOnClick={p.processTextReset.bind(this)}
+            />
             <button type="button" onClick={this.processSubmit.bind(this)}>Submit</button>
 
           </form>

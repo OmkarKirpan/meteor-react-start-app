@@ -2,6 +2,8 @@
 
 import React from 'react';
 
+import Button from './../_App/Button'
+
 
 export default class TaskPrivate extends React.Component {
 
@@ -9,7 +11,7 @@ export default class TaskPrivate extends React.Component {
     super(props);
   }
 
-  onClick() {
+  onClickPrivate() {
 
     var p = this.props;
 
@@ -27,9 +29,11 @@ export default class TaskPrivate extends React.Component {
 
     return (
 
-      <button className="toggle-private" onClick={this.onClick.bind(this)}>
-        { p.task.privateBtnLbl }
-      </button>
+      <Button 
+        value={ p.task.privateBtnLbl }
+        extraClass='button-private'
+        handleOnClick={this.onClickPrivate.bind(this)}
+      />
 
     );
 

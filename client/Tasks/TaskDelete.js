@@ -2,6 +2,8 @@
 
 import React from 'react';
 
+import Button from './../_App/Button'
+
 
 export default class TaskDelete extends React.Component {
 
@@ -9,7 +11,7 @@ export default class TaskDelete extends React.Component {
     super(props);
   }
 
-  onClick() {
+  onClickDelete() {
 
     var p = this.props;
 
@@ -26,10 +28,12 @@ export default class TaskDelete extends React.Component {
       var p = this.props;
 
       return (
-
-        <button className="delete" onClick={this.onClick.bind(this)}>
-            &times;
-          </button>
+          
+        <Button 
+          value='&times;'
+          extraClass='button-delete'
+          handleOnClick={this.onClickDelete.bind(this)}
+        />
 
     );
   }
