@@ -3,8 +3,7 @@
 import React from 'react';
 
 
-// This component presents a form for editing the text field of a specific Task
-export class TaskTextFormEdit extends React.Component {
+export default class TaskTextFormEdit extends React.Component {
 
   constructor(props) {
         super(props);

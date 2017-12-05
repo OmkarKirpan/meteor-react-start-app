@@ -2,10 +2,10 @@
 
 import React from 'react';
 
-import { PageTitle } from './../_App/PageTitle.js'
-import { HomePageBody } from './HomePageBody.js';
+import { PageTitle } from './../_App/PageTitle'
+import { HomePageBody } from './HomePageBody';
 
-// This component represents the Home page of this app
+
 export const HomePage = () => (
 
   <div className="container">

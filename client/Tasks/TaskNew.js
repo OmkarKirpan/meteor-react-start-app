@@ -3,8 +3,7 @@
 import React from 'react';
 
 
-// This component presents a form to add a new task
-export class TaskNew extends React.Component {
+export default class TaskNew extends React.Component {
 
   constructor(props) {
         super(props);

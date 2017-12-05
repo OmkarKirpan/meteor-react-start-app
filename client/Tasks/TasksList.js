@@ -1,13 +1,13 @@
 
 
 import React from 'react';
-import { TasksHeader } from './TasksHeader.js';
-import { TasksFilter } from './TasksFilter.js';
-import { TaskOne } from './TaskOne.js';
+
+import TasksHeader from './TasksHeader';
+import TasksFilter from './TasksFilter';
+import TaskOne from './TaskOne';
 
 
-// This component represents the TasksList page of this app
-export class TasksList extends React.Component {
+export default class TasksList extends React.Component {
 
   constructor(props) {
         super(props);

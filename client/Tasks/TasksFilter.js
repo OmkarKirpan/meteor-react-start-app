@@ -3,8 +3,7 @@
 import React from 'react';
 
 
-// This component presents the filter feature
-export class TasksFilter extends React.Component {
+export default class TasksFilter extends React.Component {
 
   constructor(props) {
         super(props);

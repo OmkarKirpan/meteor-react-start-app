@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 
 import { Routes } from './Routes.js';
 
-import { AppHeader } from './AppHeader/AppHeader.js';
-import { AppSideLeft } from './AppSideLeft/AppSideLeft.js';
-import { AppSideRight } from './AppSideRight/AppSideRight.js';
-import { AppFooter } from './AppFooter/AppFooter.js';
+import { AppHeader } from './AppHeader/AppHeader';
+import { AppSideLeft } from './AppSideLeft/AppSideLeft';
+import { AppSideRight } from './AppSideRight/AppSideRight';
+import { AppFooter } from './AppFooter/AppFooter';
 
 
 // App component - represents the whole app

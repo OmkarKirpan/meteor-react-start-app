@@ -3,7 +3,6 @@
 import React from 'react';
 
 
-// This component presents the body of the Home page
 export const HomePageBody = () => (
 
   <div>

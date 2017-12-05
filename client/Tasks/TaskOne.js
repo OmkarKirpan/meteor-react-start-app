@@ -2,15 +2,13 @@
 
 import React from 'react';
 
+import TaskDelete from './TaskDelete';
+import TaskCheck from './TaskCheck';
+import TaskPrivate from './TaskPrivate';
+import TaskText from './TaskText';
 
-import { TaskDelete } from './TaskDelete.js';
-import { TaskCheck } from './TaskCheck.js';
-import { TaskPrivate } from './TaskPrivate.js';
-import { TaskText } from './TaskText.js';
 
-
-// This component represents the Tasks page of this app
-export class TaskOne extends React.Component {
+export default class TaskOne extends React.Component {
 
   constructor(props) {
         super(props);

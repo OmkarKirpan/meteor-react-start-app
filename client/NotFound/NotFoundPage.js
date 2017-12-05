@@ -1,7 +1,7 @@
 
 
 import React from 'react';
-import { PageTitle } from './../_App/PageTitle.js'
+import { PageTitle } from './../_App/PageTitle'
 
 
 export const NotFoundPage = () => (

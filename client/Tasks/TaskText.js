@@ -3,12 +3,12 @@
 import React from 'react';
 
 
-import { TaskTextPlain } from './TaskTextPlain.js';
-import { TaskTextFormEdit } from './TaskTextFormEdit.js';
+import TaskTextPlain from './TaskTextPlain';
+import TaskTextFormEdit from './TaskTextFormEdit';
 
 
 // This component represents the Tasks page of this app
-export class TaskText extends React.Component {
+export default class TaskText extends React.Component {
 
   constructor(props) {
         super(props);

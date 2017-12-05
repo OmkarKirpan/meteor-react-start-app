@@ -3,8 +3,7 @@
 import React from 'react';
 
 
-// App component - represents the Todo's features
-export class TasksHeader extends React.Component {
+export default class TasksHeader extends React.Component {
 
   constructor(props) {
         super(props);

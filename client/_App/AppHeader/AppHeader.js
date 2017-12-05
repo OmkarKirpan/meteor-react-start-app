@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import { AppNavBar } from './AppNavBar.js';
+import { AppNavBar } from './AppNavBar';
 
 
 // AppHeader component - represents the Header workspace of this App

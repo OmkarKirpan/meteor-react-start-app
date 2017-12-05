@@ -3,8 +3,7 @@
 import React from 'react';
 
 
-// This component represents the Tasks page of this app
-export class TaskDelete extends React.Component {
+export default class TaskDelete extends React.Component {
 
   constructor(props) {
     super(props);

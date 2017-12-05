@@ -4,9 +4,9 @@ import React from 'react';
 import reactMixin from 'react-mixin';
 import Tasks from '/lib/collections/tasks/declare';
 
-import { PageTitle } from './../_App/PageTitle.js'
-import { TasksList } from './TasksList.js';
-import { TaskNew } from './TaskNew.js';
+import { PageTitle } from './../_App/PageTitle'
+import TasksList from './TasksList';
+import TaskNew from './TaskNew';
 
 
 Meteor.subscribe("tasks");
