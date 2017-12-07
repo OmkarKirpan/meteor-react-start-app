@@ -4,10 +4,12 @@
 body {
   font-family: sans-serif;
   font-size: 14px;
-
-  background-color: #315481;
-  background-image: linear-gradient(to bottom, #315481, #918e82 100%);
-  background-attachment: fixed;
+  font-size: 14px;
+  
+  line-height: 1.5;
+  
+  color: #24292e;
+  background-color: ffffff;
 
   position: absolute;
   top: 0;
@@ -87,29 +89,10 @@ h1 {
   margin-right: 1em;
 }
 
-.button {
-  background-color: #AED6F1;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.button-delete {
-  color: #E74C3C;
-  font-weight: bold;
-}
-
 .nav-container {
   width: 90%;
 }
 
 .tasks-list {
   margin-top: 20px;
-}
-
-.paddingleft10 {
-  padding-left: 10px;
-}
-
-.marginleft10 {
-  margin-left: 10px;
 }

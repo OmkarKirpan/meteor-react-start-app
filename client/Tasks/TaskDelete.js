@@ -31,8 +31,8 @@ export default class TaskDelete extends React.Component {
           
         <Button 
           value='&times;'
-          extraClass='button-delete'
-          handleOnClick={this.onClickDelete.bind(this)}
+          extraClass='gc-btn-danger'
+          handleOnClick={this.onClickDelete}
         />
 
     );
