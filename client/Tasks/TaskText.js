@@ -34,16 +34,16 @@ export default class TaskText extends React.Component {
               edit={p.edit}
               editText={p.edit.text}
               frmClassName="new-task"
-              processTextTyping={p.processTextTyping.bind(this)}
-              processTextClear={p.processTextClear.bind(this)}
-              processTextReset={p.processTextReset.bind(this)}
-              endTextEditSave={p.endTextEditSave.bind(this)}
-              endTextEditClear={p.endTextEditClear.bind(this)}
+              processTextTyping={p.processTextTyping}
+              processTextClear={p.processTextClear}
+              processTextReset={p.processTextReset}
+              endTextEditSave={p.endTextEditSave}
+              endTextEditClear={p.endTextEditClear}
 
             /> : <TaskTextPlain
 
               task={ p.task }
-              beginTextEdit={p.beginTextEdit.bind(this)}
+              beginTextEdit={p.beginTextEdit}
             />
 
           }

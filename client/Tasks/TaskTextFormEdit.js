@@ -46,15 +46,15 @@ export default class TaskTextFormEdit extends React.Component {
 
             <Button 
               value='Cancel'
-              handleOnClick={p.endTextEditClear.bind(this)}
+              handleOnClick={p.endTextEditClear}
             />
             <Button 
             value='Clear'
-            handleOnClick={p.processTextClear.bind(this)}
+            handleOnClick={p.processTextClear}
             />
             <Button 
               value='Reset'
-              handleOnClick={p.processTextReset.bind(this)}
+              handleOnClick={p.processTextReset}
             />
             <button type="button" onClick={this.processSubmit.bind(this)}>Submit</button>
 

@@ -1,7 +1,18 @@
 /* CSS declarations go here */
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
 body {
   font-family: sans-serif;
+  font-size: 14px;
+
   background-color: #315481;
   background-image: linear-gradient(to bottom, #315481, #918e82 100%);
   background-attachment: fixed;
@@ -12,13 +23,9 @@ body {
   left: 0;
   right: 0;
 
-  padding: 0;
-  margin: 0;
-
-  font-size: 14px;
 }
 
-.app-wrapper,
+.app-wrap,
 .app-main,
 .app-header,
 .app-footer {
@@ -29,7 +36,7 @@ body {
   display: flex;
 }
 
-.app-wrapper {
+.app-wrap {
   height: 100%; /* 1, 3 */
   flex-direction: column;
 }
@@ -101,21 +108,4 @@ h1 {
 
 .nav-container {
   width: 90%;
-  overflow: auto;
 }
-
-.nav-container li {
-  display: inline-block;
-}
-
-.nav-left {
-  float: left;
-  margin-left: 10px;
-}
-
-.nav-right {
-  float: right;
-  margin-right: 10px;
-}
-
-

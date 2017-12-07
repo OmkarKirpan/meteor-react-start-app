@@ -12,7 +12,7 @@ import { AppFooter } from './AppFooter/AppFooter';
 // App component - represents the whole app
 export const App = ( props ) => (
 
-  <div className="app-wrapper">
+  <div className="app-wrap">
 
     <AppHeader />
 

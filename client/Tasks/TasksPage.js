@@ -16,6 +16,18 @@ export default class TasksPage extends React.Component {
 
   constructor(props) {
     super(props);
+    onTextChange=this.onTextChange.bind(this);
+    handleSubmit=this.handleSubmit.bind(this);
+    toggleHideCompleted=this.toggleHideCompleted.bind(this);
+    toggleChecked=this.toggleChecked.bind(this);
+    togglePrivate=this.togglePrivate.bind(this);
+    deleteThisTask=this.deleteThisTask.bind(this);
+    beginTextEdit=this.beginTextEdit.bind(this);
+    processTextTyping=this.processTextTyping.bind(this);
+    processTextClear=this.processTextClear.bind(this);
+    processTextReset=this.processTextReset.bind(this);
+    endTextEditSave=this.endTextEditSave.bind(this);
+    endTextEditClear=this.endTextEditClear.bind(this);
     this.state = {
       pageTitle: 'Manage Your Tasks',
       hideCompleted: false,
@@ -149,8 +161,8 @@ export default class TasksPage extends React.Component {
         { d.currentUser ?
           <TaskNew
             text={s.text}
-            onTextChange={this.onTextChange.bind(this)}
-            handleSubmit={this.handleSubmit.bind(this)}
+            onTextChange={this.onTextChange}
+            handleSubmit={this.handleSubmit}
           /> : ""
         }
 
@@ -158,16 +170,16 @@ export default class TasksPage extends React.Component {
           tasks={d.tasks}
           incompleteCount={d.incompleteCount}
           edit={s.edit}
-          toggleHideCompleted={this.toggleHideCompleted.bind(this)}
-          toggleChecked={this.toggleChecked.bind(this)}
-          togglePrivate={this.togglePrivate.bind(this)}
-          deleteThisTask={this.deleteThisTask.bind(this)}
-          beginTextEdit={this.beginTextEdit.bind(this)}
-          processTextTyping={this.processTextTyping.bind(this)}
-          processTextClear={this.processTextClear.bind(this)}
-          processTextReset={this.processTextReset.bind(this)}
-          endTextEditSave={this.endTextEditSave.bind(this)}
-          endTextEditClear={this.endTextEditClear.bind(this)}
+          toggleHideCompleted={this.toggleHideCompleted}
+          toggleChecked={this.toggleChecked}
+          togglePrivate={this.togglePrivate}
+          deleteThisTask={this.deleteThisTask}
+          beginTextEdit={this.beginTextEdit}
+          processTextTyping={this.processTextTyping}
+          processTextClear={this.processTextClear}
+          processTextReset={this.processTextReset}
+          endTextEditSave={this.endTextEditSave}
+          endTextEditClear={this.endTextEditClear}
         />
 
       </div>

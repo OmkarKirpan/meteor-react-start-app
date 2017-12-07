@@ -11,25 +11,17 @@ export const AppHeader = () => (
     
       <nav>
 
-        <ul className='nav-left'>
+          <h1>Meteor-React start-app</h1>
 
-          <li><h1>Meteor-React start-app</h1></li>
+          <Link to="/home"><button>Home</button></Link>
 
-          <li><Link to="/home"><button>Home</button></Link></li>
-
-          <li><Link to="/tasks"><button>Tasks</button></Link></li>
-
-          <li><Link to="/about"><button>About us</button></Link></li>
-
-        </ul>
-
-        <ul className='nav-right'>
+          <Link to="/tasks"><button>Tasks</button></Link>
+          
+          <Link to="/about"><button>About us</button></Link>
         
-          <li><Link to="/admin"><button>Admin</button></Link></li>
-
-          <li><AccountsUIWrapper /></li>
-
-        </ul>
+          <Link to="/admin"><button>Admin</button></Link>
+          
+          <AccountsUIWrapper />
 
       </nav>
 

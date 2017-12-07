@@ -49,15 +49,15 @@ export default class TasksList extends React.Component {
         editTask={editTask}
         showPrivateButton={showPrivateButton}
         taskClassName={taskClassName}
-        toggleChecked={p.toggleChecked.bind(this)}
-        togglePrivate={p.togglePrivate.bind(this)}
-        deleteThisTask={p.deleteThisTask.bind(this)}
-        beginTextEdit={p.beginTextEdit.bind(this)}
-        processTextTyping={p.processTextTyping.bind(this)}
-        processTextClear={p.processTextClear.bind(this)}
-        processTextReset={p.processTextReset.bind(this)}
-        endTextEditSave={p.endTextEditSave.bind(this)}
-        endTextEditClear={p.endTextEditClear.bind(this)}
+        toggleChecked={p.toggleChecked}
+        togglePrivate={p.togglePrivate}
+        deleteThisTask={p.deleteThisTask}
+        beginTextEdit={p.beginTextEdit}
+        processTextTyping={p.processTextTyping}
+        processTextClear={p.processTextClear}
+        processTextReset={p.processTextReset}
+        endTextEditSave={p.endTextEditSave}
+        endTextEditClear={p.endTextEditClear}
       />;
 
     });
@@ -81,7 +81,7 @@ export default class TasksList extends React.Component {
           />
 
           <TasksFilter
-            toggleHideCompleted={p.toggleHideCompleted.bind(this)}
+            toggleHideCompleted={p.toggleHideCompleted}
           />
 
           <ul className="task-ul">
