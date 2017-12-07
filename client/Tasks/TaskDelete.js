@@ -11,7 +11,7 @@ export default class TaskDelete extends React.Component {
     super(props);
   }
 
-  onClickDelete() {
+  onClickDelete = () => {
 
     var p = this.props;
 

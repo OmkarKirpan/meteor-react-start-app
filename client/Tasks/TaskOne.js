@@ -25,20 +25,18 @@ export default class TaskOne extends React.Component {
 
       return (
 
-        <li className={p.taskClassName} >
-
-          { p.showPrivateButton ?
-            <TaskPrivate
-              task={ p.task }
-              togglePrivate={p.togglePrivate}
-            /> : ""
-          }
+        <tr className={p.taskClassName} >
           
+          <td>
           <TaskCheck
             task={ p.task }
             toggleChecked={p.toggleChecked}
           />
-
+          </td>
+          <td>
+          <strong>{p.task.username}</strong>
+          </td>
+          <td>
           <TaskText
             task={ p.task }
             edit={p.edit}
@@ -50,13 +48,22 @@ export default class TaskOne extends React.Component {
             endTextEditSave={p.endTextEditSave}
             endTextEditClear={p.endTextEditClear}
           />
-
+          </td>
+          <td>
+          { p.showPrivateButton ?
+            <TaskPrivate
+              task={ p.task }
+              togglePrivate={p.togglePrivate}
+            /> : ""
+          }
+          </td>
+          <td>
           <TaskDelete
             task={ p.task }
             deleteThisTask={p.deleteThisTask}
           />
-
-        </li>
+          </td>
+        </tr>
 
 
     );

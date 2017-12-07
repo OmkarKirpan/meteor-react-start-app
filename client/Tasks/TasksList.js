@@ -84,9 +84,11 @@ export default class TasksList extends React.Component {
             toggleHideCompleted={p.toggleHideCompleted}
           />
 
-          <ul className="task-ul">
-            {this.renderTasks()}
-          </ul>
+          <table>
+            <tbody>
+              {this.renderTasks()}
+            </tbody>
+          </table>
 
         </div>
 

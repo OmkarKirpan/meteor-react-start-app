@@ -11,12 +11,12 @@ export default class TaskTextFormEdit extends React.Component {
         super(props);
     }
 
-  processSubmit(event) {
+  processSubmit = (event) => {
     event.preventDefault();
     this.props.endTextEditSave(this.props.editText)
   }
 
-  onTextChange(event) {
+  onTextChange = (event) => {
     this.props.processTextTyping(event.target.value)
   }
   
@@ -34,14 +34,14 @@ export default class TaskTextFormEdit extends React.Component {
         <div>
 
           <form className={ p.frmClassName }
-            onSubmit={this.processSubmit.bind(this)}
+            onSubmit={this.processSubmit}
             >
 
             <input
               autoFocus
               type="text"
               value={p.editText}
-              onChange={this.onTextChange.bind(this)}
+              onChange={this.onTextChange}
             />
 
             <Button 
@@ -56,7 +56,7 @@ export default class TaskTextFormEdit extends React.Component {
               value='Reset'
               handleOnClick={p.processTextReset}
             />
-            <button type="button" onClick={this.processSubmit.bind(this)}>Submit</button>
+            <button type="button" onClick={this.processSubmit}>Submit</button>
 
           </form>
 
