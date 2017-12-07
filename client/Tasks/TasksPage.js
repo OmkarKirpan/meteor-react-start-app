@@ -16,18 +16,7 @@ export default class TasksPage extends React.Component {
 
   constructor(props) {
     super(props);
-    onTextChange=this.onTextChange.bind(this);
-    handleSubmit=this.handleSubmit.bind(this);
-    toggleHideCompleted=this.toggleHideCompleted.bind(this);
-    toggleChecked=this.toggleChecked.bind(this);
-    togglePrivate=this.togglePrivate.bind(this);
-    deleteThisTask=this.deleteThisTask.bind(this);
-    beginTextEdit=this.beginTextEdit.bind(this);
-    processTextTyping=this.processTextTyping.bind(this);
-    processTextClear=this.processTextClear.bind(this);
-    processTextReset=this.processTextReset.bind(this);
-    endTextEditSave=this.endTextEditSave.bind(this);
-    endTextEditClear=this.endTextEditClear.bind(this);
+    
     this.state = {
       pageTitle: 'Manage Your Tasks',
       hideCompleted: false,
@@ -62,13 +51,14 @@ export default class TasksPage extends React.Component {
   /* UI EVENTS & ACTIONS
   /***************************************/
 
-   toggleHideCompleted() {
+   toggleHideCompleted = () => {
+     console.log('toggleHideCompleted: ', this.state);
     this.setState({
       hideCompleted: ! this.state.hideCompleted
     });
   }
 
-   handleSubmit(event) {
+   handleSubmit = (event) => {
     event.preventDefault();
 
     Meteor.call("tasks.add", this.state.text);
@@ -77,24 +67,24 @@ export default class TasksPage extends React.Component {
     this.setState({text: ""});
   }
 
-   onTextChange(event) {
+   onTextChange = (event) => {
     this.setState({text: event.target.value});
   }
 
-   toggleChecked(taskId, taskCheck) {
+   toggleChecked = (taskId, taskCheck) => {
     // Set the checked property to the opposite of its current value
     Meteor.call("tasks.setChecked", taskId, ! taskCheck);
   }
 
-   togglePrivate(taskId, taskPrivate) {
+   togglePrivate = (taskId, taskPrivate) => {
     Meteor.call("tasks.setPrivate", taskId, ! taskPrivate);
   }
 
-   deleteThisTask(taskId) {
+   deleteThisTask = (taskId) => {
     Meteor.call("tasks.remove", taskId);
   }
 
-   beginTextEdit(taskId, taskText) {
+   beginTextEdit = (taskId, taskText) => {
     var tmpEdit = this.state.edit
     tmpEdit.taskId = taskId
     tmpEdit.text = taskText
@@ -102,27 +92,27 @@ export default class TasksPage extends React.Component {
     this.setState({edit: tmpEdit})
   }
 
-   processTextTyping(latestText) {
+   processTextTyping= (latestText) => {
     var tmpEdit = this.state.edit
     tmpEdit.text = latestText
     this.setState({edit: tmpEdit})
   }
 
-   processTextClear() {
+   processTextClear = () => {
     // Clear only Text
    var tmpEdit = this.state.edit;
    tmpEdit.text = "";
    this.setState({edit: tmpEdit});
   }
 
-   processTextReset() {
+   processTextReset = () => {
     // Reset form
    var tmpEdit = this.state.edit
    tmpEdit.text = this.state.edit.taskText
    this.setState({edit: tmpEdit})
   }
 
-   endTextEditSave(finalText) {
+   endTextEditSave = (finalText) => {
     if (finalText === "") {
       finalText = "?-?-?";
     }
@@ -130,7 +120,7 @@ export default class TasksPage extends React.Component {
     this.endTextEditClear()
   }
 
-   endTextEditClear() {
+   endTextEditClear = () => {
     // Clear all
    var tmpEdit = this.state.edit
    tmpEdit.taskId = ""

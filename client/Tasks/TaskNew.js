@@ -21,21 +21,29 @@ export default class TaskNew extends React.Component {
       return (
 
         <div>
-          <h3>Add new Task</h3>
 
-          <form className="new-task" onSubmit={p.handleSubmit.bind(this)} >
+          <h3>Add new task</h3>
 
-            <input
-              type="text"
-              placeholder="Type to add new tasks"
-              value={p.text}
-              onChange={p.onTextChange.bind(this)}
-            />
+          <form className="new-task-form" onSubmit={p.handleSubmit} >
+            
+          <div> 
+              <label className='gc-prelabel' htmlFor="newtask">
+                New task: 
+              </label>
+
+              <input
+                id='newtask'
+                className='gc-inputtext'
+                type="text"
+                placeholder="Type to add new tasks"
+                value={p.text}
+                onChange={p.onTextChange}
+              />
+            </div>
 
           </form>
 
         </div>
-
       );
 
     }

@@ -74,7 +74,7 @@ export default class TasksList extends React.Component {
 
       return (
 
-        <div>
+        <div className='tasks-list'>
 
           <TasksHeader
             incompleteCount={p.incompleteCount}

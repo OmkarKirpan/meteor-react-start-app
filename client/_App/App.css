@@ -1,13 +1,5 @@
 /* CSS declarations go here */
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-	height: 100%;
-}
 
 body {
   font-family: sans-serif;
@@ -108,4 +100,16 @@ h1 {
 
 .nav-container {
   width: 90%;
+}
+
+.tasks-list {
+  margin-top: 20px;
+}
+
+.paddingleft10 {
+  padding-left: 10px;
+}
+
+.marginleft10 {
+  margin-left: 10px;
 }
