@@ -3,7 +3,7 @@
 import React from 'react';
 
 import TaskDelete from './TaskDelete';
-import TaskCheck from './TaskCheck';
+import TaskOpenClosed from './TaskOpenClosed';
 import TaskPrivate from './TaskPrivate';
 import TaskText from './TaskText';
 
@@ -25,14 +25,8 @@ export default class TaskOne extends React.Component {
 
       return (
 
-        <tr className={p.taskClassName} >
+        <tr className={p.taskListRowClass} >
           
-          <td>
-          <TaskCheck
-            task={ p.task }
-            toggleChecked={p.toggleChecked}
-          />
-          </td>
           <td>
           <strong>{p.task.username}</strong>
           </td>
@@ -50,18 +44,28 @@ export default class TaskOne extends React.Component {
           />
           </td>
           <td>
-          { p.showPrivateButton ?
-            <TaskPrivate
-              task={ p.task }
-              togglePrivate={p.togglePrivate}
-            /> : ""
-          }
+          <TaskOpenClosed
+            task={ p.task }
+            toggleChecked={p.toggleChecked}
+          />
+          </td><td>
+          <strong>HERE URGENCY!</strong>
           </td>
           <td>
-          <TaskDelete
-            task={ p.task }
-            deleteThisTask={p.deleteThisTask}
-          />
+            { p.userOwnsTask ?
+              <TaskPrivate
+                task={ p.task }
+                togglePrivate={p.togglePrivate}
+              /> : "" 
+            }
+          </td>
+          <td>
+            { p.userOwnsTask ?
+              <TaskDelete
+                task={ p.task }
+                deleteThisTask={p.deleteThisTask}
+              /> : ""
+            }
           </td>
         </tr>
 

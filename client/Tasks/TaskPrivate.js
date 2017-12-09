@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import Button from './../_App/Button'
+import Button from './../_Utilities/Button/Button'
 
 
 export default class TaskPrivate extends React.Component {
@@ -11,11 +11,11 @@ export default class TaskPrivate extends React.Component {
     super(props);
   }
 
-  onClickPrivate() {
+  onClickToggle = () => {
 
     var p = this.props;
 
-    p.togglePrivate(p.task._id, p.task.private);
+    p.togglePrivate(p.task._id, p.task.isPrivate);
   }
 
 
@@ -30,9 +30,10 @@ export default class TaskPrivate extends React.Component {
     return (
 
       <Button 
-        value={ p.task.privateBtnLbl }
-        extraClass='button-private'
-        handleOnClick={this.onClickPrivate.bind(this)}
+        value={ p.task.privatePublicBtnLbl }
+        baseClass='gc-btn gc-btn-small gc-button-normal'
+        extraClass={ p.task.privatePublicClassName }
+        handleOnClick={this.onClickToggle.bind(this)}
       />
 
     );

@@ -1,0 +1,53 @@
+
+.gc-btn {
+  color: #24292e;
+  background-color: #eff3f6;
+  font-size: 14px;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background-image: none;
+  display: inline-block;
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+.gc-btn-medium {
+  padding: 6px 12px;
+  font-weight: 600;
+  line-height: 1.15;  
+  height: 32px;
+}
+
+.gc-btn-large {
+  padding: 0 7px;
+  padding: 0px 7px;
+  height: 40px;
+}
+
+.gc-btn-small {
+  padding: 0 7px;
+  padding: 0px 7px;
+  height: 24px;
+}
+
+.gc-btn-normal {
+  color: rgba(0, 0, 0, 0.65);
+  background-color: #fff;
+  border-color: #d9d9d9;
+}
+
+.gc-btn-primary {
+  color: #fff;
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
+
+.gc-btn-danger {
+    color: #f5222d;
+    background-color: #f5f5f5;
+    border-color: #d9d9d9;
+}
+

@@ -13,13 +13,13 @@ export const AppHeader = () => (
 
           <h1>Meteor-React start-app</h1>
 
-          <Link to="/home"><button className='gc-btn'>Home</button></Link>
+          <Link to="/home"><button className='gc-btn gc-btn-medium gc-btn-primary'>Home</button></Link>
 
-          <Link to="/tasks"><button className='gc-btn'>Tasks</button></Link>
+          <Link to="/tasks"><button className='gc-btn gc-btn-medium gc-btn-primary'>Tasks</button></Link>
           
-          <Link to="/about"><button className='gc-btn'>About us</button></Link>
+          <Link to="/about"><button className='gc-btn gc-btn-medium gc-btn-primary'>About us</button></Link>
         
-          <Link to="/admin"><button className='gc-btn'>Admin</button></Link>
+          <Link to="/admin"><button className='gc-btn gc-btn-medium gc-btn-primary'>Admin</button></Link>
           
           &nbsp;<AccountsUIWrapper />
 

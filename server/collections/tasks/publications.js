@@ -13,7 +13,7 @@ import Tasks from '/lib/collections/tasks/declare';
 Meteor.publish("tasks", function () {
   return Tasks.find({
     $or: [
-      { private: {$ne: true} },
+      { isPrivate: {$ne: true} },
       { owner: this.userId }
     ]
   });

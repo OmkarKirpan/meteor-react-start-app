@@ -24,7 +24,7 @@ export default class TaskNew extends React.Component {
 
           <h3>Add new task</h3>
 
-          <form className="new-task-form" onSubmit={p.handleSubmit} >
+          <form className='gc-form tasknewform' onSubmit={p.handleSubmit} >
             
           <div> 
               <label className='gc-prelabel' htmlFor="newtask">

@@ -5,17 +5,17 @@ import React from 'react';
 import Button from './../_Utilities/Button/Button'
 
 
-export default class TaskDelete extends React.Component {
+export default class TaskOpenClosed extends React.Component {
 
   constructor(props) {
     super(props);
   }
 
-  onClickDelete = () => {
+  onClickToggle = () => {
 
     var p = this.props;
 
-    p.deleteThisTask(p.task._id)
+    p.toggleChecked(p.task._id, p.task.isOpen)
   }
 
 
@@ -28,11 +28,12 @@ export default class TaskDelete extends React.Component {
       var p = this.props;
 
       return (
-          
+
         <Button 
-          value='&times;'
-          extraClass='gc-btn-danger'
-          handleOnClick={this.onClickDelete}
+          value={ p.task.openClosedBtnLbl }
+          baseClass='gc-btn gc-btn-small gc-button-normal'
+          extraClass={ p.task.openClosedClassName }
+          handleOnClick={this.onClickToggle}
         />
 
     );

@@ -22,7 +22,7 @@ export default class TaskText extends React.Component {
     render() {
 
       var p = this.props;
-      console.log('p.editTask', p.editTask);
+      
       return (
 
         <span>

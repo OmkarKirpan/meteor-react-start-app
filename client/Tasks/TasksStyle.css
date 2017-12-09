@@ -1,82 +1,38 @@
 
-form {
-  margin-top: 10px;
-  margin-bottom: -10px;
-  position: relative;
+
+/**
+
+    TASK RELATED CSS
+
+*/
+.tasknewform,
+.taskslisttable {
+  background-color: #E5E4E2;
 }
 
-.new-task input {
-  box-sizing: border-box;
-  padding: 10px 0;
-  background: transparent;
-  border: none;
-  width: 100%;
-  padding-right: 80px;
-  font-size: 1em;
+.taskslisttablehead {
+  color: #ffffff;
+  background-color: #000000;
+
 }
 
-.new-task input:focus{
-  outline: 0;
+.tasklistrow {
+  background-color: #F8F8FF;
 }
 
-.task-ul {
-  margin: 0;
-  padding: 0;
-  background: white;
+.taskprivate {
+  background-color: #BA55D3 !important;
 }
 
-.delete {
-  float: right;
-  font-weight: bold;
-  background: none;
-  font-size: 1em;
-  border: none;
-  position: relative;
+.taskpublic {
+  background-color: #E6E6FA !important;
 }
 
-.task-li {
-  position: relative;
-  list-style: none;
-  padding: 15px;
-  border-bottom: #eee solid 1px;
+.taskopen {
+  background-color: #FFC300 !important;
 }
 
- .text {
-  margin-left: 10px;
+.taskclosed {
+  background-color: #DAF7A6 !important;
 }
 
-.task-checked {
-  color: #888;
-}
-
-.task-checked .text {
-  text-decoration: line-through;
-}
-
-.task-private {
-  background: #eee;
-  border-color: #ddd;
-}
-
-header .hide-completed {
-  float: right;
-}
-
-.toggle-private {
-  margin-left: 5px;
-}
-
-@media (max-width: 600px) {
-.task-li {
-    padding: 12px 15px;
-  }
-
-  .search {
-    width: 150px;
-    clear: both;
-  }
-
-  .new-task input {
-    padding-bottom: 5px;
-  }
-}
