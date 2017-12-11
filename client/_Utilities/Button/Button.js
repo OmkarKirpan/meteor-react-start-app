@@ -24,7 +24,7 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
-  baseClass: 'gc-btn gc-btn-medium gc-button-normal',
+  baseClass: ' gc-btn gc-btn-medium gc-button-normal ',
   extraClass: '',
 };
 

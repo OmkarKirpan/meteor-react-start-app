@@ -40,23 +40,30 @@ export default class TaskTextFormEdit extends React.Component {
             <input
               autoFocus
               type="text"
+              className='gc-inputtext'
               value={p.editText}
               onChange={this.onTextChange}
             />
-
+            <br />
             <Button 
               value='Cancel'
+              extraClass=' gc-btn-small taskeditbtngroup taskeditcancel '
               handleOnClick={p.endTextEditClear}
             />
             <Button 
             value='Clear'
+            extraClass=' gc-btn-small taskeditbtngroup taskeditclear '
             handleOnClick={p.processTextClear}
             />
             <Button 
               value='Reset'
+              extraClass=' gc-btn-small taskeditbtngroup taskeditreset'
               handleOnClick={p.processTextReset}
             />
-            <button type="button" onClick={this.processSubmit}>Submit</button>
+            <button
+            type="button"
+            className='taskeditbtngroup taskeditsubmit'
+            onClick={this.processSubmit}>Submit</button>
 
           </form>
 

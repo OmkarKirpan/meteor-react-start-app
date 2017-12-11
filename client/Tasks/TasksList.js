@@ -13,7 +13,7 @@ export default class TasksList extends React.Component {
     }
 
 
-  tableHeaderTitleColSpan()  { return Meteor.userId() ?  "6" : "4" }
+  tableHeaderTitleColSpan()  { return Meteor.userId() ?  "5" : "3" }
 
   isLoggedInUser() { return Meteor.userId() }
 
@@ -27,13 +27,15 @@ export default class TasksList extends React.Component {
 
       const userOwnsTask = (task.owner === Meteor.userId()) ? true : false;
 
-      task.openClosedBtnLbl = (task.isOpen) ? "open" : "closed";
-      task.openClosedClassName = (task.isOpen) ? " taskopen " : " taskclosed ";
+      task.openClosedBtnLbl = (task.isOpen) ? "todo" : "done";
+      task.openClosedClassName = (task.isOpen) ? " tasklisttd taskopenclosed taskopen " : " tasklisttd taskopenclosed taskclosed ";
 
       if (task.owner === Meteor.userId()) {
 
         task.privatePublicBtnLbl = (task.isPrivate) ? "private" : "public";
-        task.privatePublicClassName = (task.isPrivate) ? " taskprivate " : " taskpublic ";
+        task.privatePublicClassName = (task.isPrivate) ? " tasklisttd taskpublicprivate taskprivate " : " tasklisttd taskpublicprivate taskpublic ";
+
+        task.removeClassName = 'tasklisttd';
         
         editTask = (p.edit.taskId === task._id) ? true : false;
       }
@@ -74,30 +76,43 @@ export default class TasksList extends React.Component {
 
         <div className='tasks-list'>
 
-          <TasksFilter
-            toggleHideCompleted={p.toggleHideCompleted}
-          />
+          
 
           <table className='gc-table taskslisttable'>
             <thead className='taskslisttablehead'>
-              <tr>
+              
+              <tr className='filterrow'>
                 <th 
-                  colSpan={ this.tableHeaderTitleColSpan() }
+                  colSpan='2'
+                  className='textalignleft'
                 >
-                <h3>Tasks List</h3>Tasks in this list: {p.incompleteCount}</th>
+                  <TasksFilter
+                    toggleHideCompleted={p.toggleHideCompleted}
+                  />
+                </th>
+                <th 
+                  colSpan={ this.tableHeaderTitleColSpan() - 2 }
+                  className='textalignright'
+                >
+                  <span className='textalignright'>Todos: {p.incompleteCount}</span>
+                </th>
               </tr>
               <tr>
-                <th>User</th>
-                <th>Task</th>
-                <th>Task State</th>
-                <th>Urgency</th>
-                { this.isLoggedInUser() ? 
-                  <th>Public/Private</th>
-                  : null }
+                <th colSpan={ this.tableHeaderTitleColSpan() }>
+                  <h2>Tasks List</h2>
+                </th>
+              </tr>
+              <tr>
+                  <th>User</th>
+                  <th>Task</th>
+                  <th className='openclosedth'>Task State</th>
                   { this.isLoggedInUser() ? 
-                    <th>Remove</th>
-                  : null
-                }
+                    <th className='publicprivateth'>Public/Private</th>
+                    : null }
+                    { this.isLoggedInUser() ? 
+                      <th>Remove</th>
+                    : null
+                  }
               </tr>
             </thead>
             <tbody>

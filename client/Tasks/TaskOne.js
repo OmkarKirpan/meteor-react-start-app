@@ -14,7 +14,7 @@ export default class TaskOne extends React.Component {
         super(props);
     }
 
-
+    isLoggedInUser() { return Meteor.userId() }
 /***************************************/
 /* RENDER
 /***************************************/
@@ -43,30 +43,30 @@ export default class TaskOne extends React.Component {
             endTextEditClear={p.endTextEditClear}
           />
           </td>
-          <td>
           <TaskOpenClosed
             task={ p.task }
             toggleChecked={p.toggleChecked}
           />
-          </td><td>
-          <strong>HERE URGENCY!</strong>
-          </td>
-          <td>
+          
             { p.userOwnsTask ?
               <TaskPrivate
                 task={ p.task }
                 togglePrivate={p.togglePrivate}
-              /> : "" 
+              /> 
+              : this.isLoggedInUser() ? <td></td>
+              : null
             }
-          </td>
-          <td>
-            { p.userOwnsTask ?
-              <TaskDelete
-                task={ p.task }
-                deleteThisTask={p.deleteThisTask}
-              /> : ""
-            }
-          </td>
+          
+          
+          { p.userOwnsTask ?
+            <TaskDelete
+              task={ p.task }
+              deleteThisTask={p.deleteThisTask}
+            /> 
+            : this.isLoggedInUser() ? <td></td>
+            : null
+          }
+          
         </tr>
 
 

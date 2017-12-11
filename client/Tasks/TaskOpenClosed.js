@@ -29,12 +29,14 @@ export default class TaskOpenClosed extends React.Component {
 
       return (
 
-        <Button 
-          value={ p.task.openClosedBtnLbl }
-          baseClass='gc-btn gc-btn-small gc-button-normal'
-          extraClass={ p.task.openClosedClassName }
-          handleOnClick={this.onClickToggle}
-        />
+        <td className='textaligncenter'>
+          <Button 
+            value={ p.task.openClosedBtnLbl }
+            baseClass='gc-btn gc-btn-small gc-button-normal'
+            extraClass={ p.task.openClosedClassName }
+            handleOnClick={this.onClickToggle}
+          />
+        </td>
 
     );
   }

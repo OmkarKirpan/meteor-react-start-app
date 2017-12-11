@@ -16,23 +16,75 @@
 
 }
 
+.tasklistth,
+.tasklisttd {
+  margin: 0px 2px;
+  padding: 2px 4px;
+}
+
 .tasklistrow {
   background-color: #F8F8FF;
 }
 
-.taskprivate {
-  background-color: #BA55D3 !important;
+.publicprivateth,
+.openclosedth {
+  min-width: 92px;
 }
 
-.taskpublic {
-  background-color: #E6E6FA !important;
+/* Buttons styling of Task List */
+
+.taskpublicprivate,
+.taskopenclosed {
+  min-width: 88px;
+  margin: 1px 5px;
 }
 
-.taskopen {
-  background-color: #FFC300 !important;
+.taskprivate {  
+  border-color: #BA55D3;
+  background-color: #BA55D3;
 }
 
-.taskclosed {
-  background-color: #DAF7A6 !important;
+.taskpublic {  
+  border-color: rgb(190, 200, 200);
+  background-color: rgb(190, 200, 200);
+}
+
+.taskopen {  
+  border-color: #FFC300;
+  background-color: #FFC300;
+}
+
+.taskclosed {  
+  border-color: #DAF7A6;
+  background-color: #DAF7A6;
+}
+
+.taskremove {
+
+}
+.taskeditbtngroup {
+  min-width: 60px;
+  margin: 1px 4px;
+}
+.taskeditcancel,
+.taskeditclear,
+.taskeditreset {  
+  border-color: #E5E4E2;
+  background-color: #E5E4E2;
+}
+
+.taskeditcancel {
+  color: #8B4513
+}
+.taskeditclear {
+  color: #A0522D
+}
+.taskeditreset {
+  color: #A52A2A
+}
+.taskeditsubmit { 
+  color: #F0FFFF;
+  border-color: #800000;
+  background-color: #800000;
 }
 

@@ -19,9 +19,9 @@ export default class TasksFilter extends React.Component {
       var p = this.props;
 
       return (
-        <div className='filter tasksfilter'>
+        <span className='textalignleft'>
           
-          <div>
+          <span>
             <input
               type="checkbox"
               readOnly={true}
@@ -31,8 +31,8 @@ export default class TasksFilter extends React.Component {
             <label className="hide-completed">
               Hide Completed Tasks
             </label>
-          </div>
-        </div>
+          </span>
+        </span>
       );
     }
   }

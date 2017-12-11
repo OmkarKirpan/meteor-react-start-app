@@ -28,12 +28,14 @@ export default class TaskDelete extends React.Component {
       var p = this.props;
 
       return (
-          
-        <Button 
-          value='&times;'
-          extraClass='gc-btn-danger'
-          handleOnClick={this.onClickDelete}
-        />
+        
+        <td className='textaligncenter'>
+          <Button 
+            value='&times;'
+            extraClass=' gc-btn-small gc-btn-danger '
+            handleOnClick={this.onClickDelete}
+          />
+        </td>
 
     );
   }

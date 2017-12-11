@@ -72,6 +72,19 @@ textarea {
   resize: vertical;
 }
 
+table {
+  border-collapse: collapse;
+}
+th {
+  height: 50px;
+}
+th, td {
+  padding: 7px;
+}
+
+table, tr {
+  border-bottom: 1px solid black;
+}
 
 .gc-table,
 .gc-form {
@@ -177,4 +190,20 @@ h1 {
 
 .nav-container {
   width: 90%;
+}
+
+.filterrow {
+  font-size: 12px;
+}
+
+.textalignleft {
+  text-align: left;
+}
+
+.textalignright {
+  text-align: right;
+}
+
+.textaligncenter {
+  text-align: center;
 }

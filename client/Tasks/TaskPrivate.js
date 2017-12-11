@@ -29,12 +29,14 @@ export default class TaskPrivate extends React.Component {
 
     return (
 
-      <Button 
-        value={ p.task.privatePublicBtnLbl }
-        baseClass='gc-btn gc-btn-small gc-button-normal'
-        extraClass={ p.task.privatePublicClassName }
-        handleOnClick={this.onClickToggle.bind(this)}
-      />
+      <td className='textaligncenter'>
+        <Button 
+          value={ p.task.privatePublicBtnLbl }
+          baseClass='gc-btn gc-btn-small gc-button-normal'
+          extraClass={ p.task.privatePublicClassName }
+          handleOnClick={this.onClickToggle.bind(this)}
+        />
+      </td>
 
     );
 

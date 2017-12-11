@@ -32,16 +32,14 @@ export default class TasksPage extends React.Component {
 
   // The getMeteorData method makes Meteor data available and puts them on this.data
   getMeteorData() {
-    let query = {};
-
-    if (this.state.hideCompleted) {
-      // If hide completed is checked, filter tasks
-      query = {checked: {$ne: true}};
-    }
+    
+    // If hide completed is checked, filter tasks
+    const query = (this.state.hideCompleted) ? ({isOpen: {$eq: true}}) : ({});
+    console.log('getMeteorData', query);
 
     return {
       tasks: Tasks.find(query, {sort: {createdAt: -1}}).fetch(),
-      incompleteCount: Tasks.find({checked: {$ne: true}}).count(),
+      incompleteCount: Tasks.find({isOpen: {$eq: true}}).count(),
       currentUser: Meteor.user()
 
     }
